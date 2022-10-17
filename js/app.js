@@ -21,4 +21,15 @@ const displayAllNewsCategory = (newses) => {
     allNewsCategoryContainer.appendChild(newsDiv);
   });
 };
+
+const loadAllNews = (category_id) => {
+  const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => displayAllNews(data.data));
+};
+
+const displayAllNews = (AllNews) => {
+  console.log(AllNews);
+};
 lodeAllNewsCategory();
