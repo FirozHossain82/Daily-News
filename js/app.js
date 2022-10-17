@@ -65,9 +65,9 @@ const displayAllNews = (allNews) => {
                             }</i>
                         </div>
                       <div class="card-actions">
-                          <button onclick="loadNewsDetails('${
+                          <label for="my-modal-6"  onclick="loadNewsDetails('${
                             allnewses._id
-                          }')" class="btn btn-primary">Details</button>
+                          }')" class="btn btn-primary modal-button">Show Details</label>
                       </div>
                   </div>
 
@@ -79,4 +79,49 @@ const displayAllNews = (allNews) => {
   });
 };
 
+const loadNewsDetails = (_id) => {
+  const url = `https://openapi.programming-hero.com/api/news/${_id}`;
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => displayNewsDetails(data.data));
+};
+
+const displayNewsDetails = (newsDetails) => {
+  // console.log(newsDetails);
+  const modalContainer = document.getElementById("modal");
+  modalContainer.textContent = "";
+  const modalDiv = document.createElement("div");
+  modalDiv.innerHTML = `
+    <h1 class="font-bold text-medium my-2" >${newsDetails[0].title}</h1>
+    <div class="card card-side bg-base-100">
+       <figure><img class="rounded-lg" src="${
+         newsDetails[0].thumbnail_url
+       }" alt="Movie"/></figure>
+          <div class="card-body">
+               <h4 class="card-title">Name: ${
+                 newsDetails[0].author.name
+                   ? newsDetails[0].author.name
+                   : "Missing Author Name"
+               }</h4>
+                <p><span class='text-lime-600 font-medium'>Publish Date : </span>${
+                  newsDetails[0].author.published_date
+                    ? newsDetails[0].author.published_date
+                    : "Not A Found"
+                }</p>
+                <p><span class='text-lime-600 font-medium'>  Details : </span>${
+                  newsDetails[0].details.slice(0, 100)
+                    ? newsDetails[0].details.slice(0, 100)
+                    : "Not Found"
+                }</p>
+                <p><span class='text-lime-600 font-medium'>Rating Badge : </span> ${
+                  newsDetails[0].rating.badge
+                    ? newsDetails[0].rating.badge
+                    : "Not A Found"
+                }</p>
+   
+       </div>
+      </div>
+   `;
+  modalContainer.appendChild(modalDiv);
+};
 lodeAllNewsCategory();
