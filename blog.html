@@ -55,66 +55,99 @@
             </div> -->
         </div>
     </header>
-    <main>
-        <section>
-            <div>
-                <h1 class="text-2xl font-bold text-fuchsia-200">1.What is difference between var,let and const?</h1>
-                <p class="border border-lime-400 p-4 rounded-lg m-3">
-                    <span class="font-medium text-purple-400">Var:</span> Var:Earlier only var is there and he is the
-                    king of variable declarations. But there are some issues associated with
-                    variables declared with var, though. That is why let and const introduced.
-                    Var declarations are globally scoped or function scoped. That means if a variable is declared with
-                    var outside a
-                    function then it is in the global scope(accessible anywhere). Otherwise, if they are inside a
-                    function we can only
-                    access them inside the function
-                </p>
-                <p class="border border-lime-400 p-4 rounded-lg m-3">
-                    <span class="font-medium text-purple-400">Let:</span> Let:The let keyword declares a block-scoped
-                    local variable, optionally initializing it to a value.
-                    Block-scoped means that the variable is only available within the block it was declared in, which is
-                    usually denoted by
-                    curly braces {}
-                </p>
-                <p class="border border-lime-400 p-4 rounded-lg m-3">
-                    <span class="font-medium text-purple-400">Const:</span>const: The const keyword declares a
-                    block-scoped, immutable constant variable, i.e. a variable that can’t be reassigned.
-                    Constants are also called “immutable variables”, but that’s a bit of a misnomer since they are
-                    actually variables – just
-                    ones that can’t be reassigned.
-                </p>
-            </div>
+    <br>
 
+    <div>
+        <h1 class="text-2xl font-bold text-fuchsia-200">1.What is difference between var,let and const?</h1>
+        <p class="border border-lime-400 p-4 rounded-lg m-3">
+            <span class="font-medium text-purple-400">Var:</span> Var:Earlier only var is there and he is the
+            king of variable declarations. But there are some issues associated with
+            variables declared with var, though. That is why let and const introduced.
+            Var declarations are globally scoped or function scoped. That means if a variable is declared with
+            var outside a
+            function then it is in the global scope(accessible anywhere). Otherwise, if they are inside a
+            function we can only
+            access them inside the function
+        </p>
+        <p class="border border-lime-400 p-4 rounded-lg m-3">
+            <span class="font-medium text-purple-400">Let:</span> Let:The let keyword declares a block-scoped
+            local variable, optionally initializing it to a value.
+            Block-scoped means that the variable is only available within the block it was declared in, which is
+            usually denoted by
+            curly braces {}
+        </p>
+        <p class="border border-lime-400 p-4 rounded-lg m-3">
+            <span class="font-medium text-purple-400">Const:</span>const: The const keyword declares a
+            block-scoped, immutable constant variable, i.e. a variable that can’t be reassigned.
+            Constants are also called “immutable variables”, but that’s a bit of a misnomer since they are
+            actually variables – just
+            ones that can’t be reassigned.
+        </p>
 
-            <div>
-                <h1 class="text-2xl font-bold text-fuchsia-200">2.What is the difference between arrow function and
-                    regular function?</h1>
-                <p class="border border-lime-400 p-4 rounded-lg m-3">
-                    <span class="font-medium text-purple-400">Arrow Function:</span>Arrow Function:A consequence of this
-                    resolved lexically is that an arrow function cannot be used as a constructor.
-                    If you try to invoke an arrow function prefixed with new keyword, JavaScrip throws an error:
-                    const Car = (color) => {
-                    this.color = color;
-                    };
-                    const redCar = new Car('red'); // TypeError: Car is not a constructor
-                    Invoking new Car('red'), where Car is an arrow function, throws TypeError: Car is not a constructor.
-                </p>
-                <p class="border border-lime-400 p-4 rounded-lg m-3">
-                    <span class="font-medium text-purple-400">Regular function:</span> Regular function:Inside the body
-                    of a regular function, arguments is a special array-like object containing the list of arguments
-                    with
-                    which the function has been invoked.
-                    Let's invoke myFunction() function with 2 arguments:
-                    function myFunction() {
-                    console.log(arguments);
-                    }
-                    myFunction('a', 'b'); // logs { 0: 'a', 1: 'b', length: 2 }
-                    Inside of myFunction() body the arguments is an array-like object containing the invocation
-                    arguments: 'a' and 'b'.
-                </p>
+    </div>
+    </br>
 
-            </div>
-        </section>
+    <div>
+        <h1 class="text-2xl font-bold text-fuchsia-200">2.What is the difference between arrow function and
+            regular function?</h1>
+        <p class="border border-lime-400 p-4 rounded-lg m-3">
+            <span class="font-medium text-purple-400">Arrow Function:</span>Arrow Function:A consequence of this
+            resolved lexically is that an arrow function cannot be used as a constructor.
+            If you try to invoke an arrow function prefixed with new keyword, JavaScrip throws an error:
+            const Car = (color) => {
+            this.color = color;
+            };
+            const redCar = new Car('red'); // TypeError: Car is not a constructor
+            Invoking new Car('red'), where Car is an arrow function, throws TypeError: Car is not a constructor.
+        </p>
+        <p class="border border-lime-400 p-4 rounded-lg m-3">
+            <span class="font-medium text-purple-400">Regular function:</span> Regular function:Inside the body
+            of a regular function, arguments is a special array-like object containing the list of arguments
+            with
+            which the function has been invoked.
+            Let's invoke myFunction() function with 2 arguments:
+            function myFunction() {
+            console.log(arguments);
+            }
+            myFunction('a', 'b'); // logs { 0: 'a', 1: 'b', length: 2 }
+            Inside of myFunction() body the arguments is an array-like object containing the invocation
+            arguments: 'a' and 'b'.
+        </p>
+    </div>
+    </br>
+
+    <div>
+        <h1 class="text-2xl font-bold text-fuchsia-200">3.what is the difference between map,forEach,filter,find?
+        </h1>
+        <p class="border border-lime-400 p-4 rounded-lg m-3">
+            <span class="font-medium text-purple-400">Map:</span> Map:The map() method loops through each element in
+            array and calls the provided function for each element. This method
+            creates a new array and doesn’t alter the original array.
+        </p>
+        <p class="border border-lime-400 p-4 rounded-lg m-3">
+            <span class="font-medium text-purple-400">Filter:</span> Filter:The filter() method in JavaScript
+            creates a new array with the elements that satisfies the provided condition. This
+            method calls a provided function for each element in array and verifies the condition given in the
+            provided function and
+            passes only those elements that satisfy the given condition.
+        </p>
+        <p class="border border-lime-400 p-4 rounded-lg m-3">
+            <span class="font-medium text-purple-400">For Each:</span>For Each: forEach() is used to execute the
+            same code on every element in an array but does not change the array and it returns
+            undefined.
+        </p>
+        <p class="border border-lime-400 p-4 rounded-lg m-3">
+            <span class="font-medium text-purple-400">Find:</span>Find: The find() method returns the value of the
+            first element that passes a test. The find() method executes a function for
+            each array element. The find() method returns undefined if no elements are found. The find() method does
+            not execute the
+            function for empty elements.
+        </p>
+
+    </div>
+    </br>
+
+    </section>
     </main>
 
 
